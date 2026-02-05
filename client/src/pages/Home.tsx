@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { JoinWaitlistForm } from "@/components/JoinWaitlistForm";
 import { motion } from "framer-motion";
+import logoPng from "@assets/Screenshot_2026-02-05_at_12.10.24_PM_1770318632225.png";
 import { 
   FileText, 
   ShieldCheck, 
@@ -185,63 +186,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRICING / VALUE SECTION */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-block px-4 py-1.5 rounded-full bg-teal-500/20 text-teal-300 font-semibold text-sm mb-6 border border-teal-500/30">
-                Early Access Offer
-              </div>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-                Free Property Analysis <br/>
-                <span className="text-slate-400">For Early Adopters</span>
-              </h2>
-              <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                We're currently in beta and offering our full suite of analysis tools completely free of charge. No hidden fees, no credit card required. Just honest insights.
-              </p>
-              
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Comprehensive document analysis",
-                  "Buy / Don't Buy recommendation engine",
-                  "Detailed financial risk assessment",
-                  "Unlimited AI chat support"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center text-slate-200">
-                    <Check className="w-5 h-5 text-teal-400 mr-3" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="relative">
-              {/* Card visual */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-teal-500 rounded-3xl blur-2xl opacity-30 transform rotate-3"></div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-10 relative">
-                <div className="text-center">
-                  <span className="text-sm font-semibold tracking-wider text-teal-300 uppercase">Limited Time</span>
-                  <div className="text-6xl font-display font-bold mt-2 mb-1">$0</div>
-                  <div className="text-slate-300">Free forever for beta users</div>
-                </div>
-                <div className="mt-8 pt-8 border-t border-white/10">
-                  <button 
-                    onClick={scrollToWaitlist}
-                    className="w-full py-4 rounded-xl bg-white text-slate-900 font-bold hover:bg-slate-50 transition-colors shadow-lg"
-                  >
-                    Claim Free Access
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FINAL CTA / WAITLIST */}
       <section id="waitlist" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -261,12 +205,11 @@ export default function Home() {
       <footer className="bg-slate-50 border-t border-slate-200 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center space-x-2">
-            <div className="p-1.5 bg-primary/10 rounded-lg">
-              <FileText className="h-5 w-5 text-primary" />
-            </div>
-            <span className="font-display font-bold text-lg text-slate-900">
-              HOAFAX
-            </span>
+            <img 
+              src={logoPng} 
+              alt="HOAFAX Logo" 
+              className="h-8 w-auto object-contain"
+            />
           </div>
           <div className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} HOAFAX. All rights reserved.
